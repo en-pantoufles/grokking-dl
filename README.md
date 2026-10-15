@@ -6,12 +6,28 @@
 - Python 3.14, JupyterLab, NumPy
 - GPU: RTX 4050 연결, CuPy(NumPy와 같은 사용법)
 
+## 처음 받는 PC에서
+
+```bash
+git clone https://github.com/en-pantoufles/grokking-dl.git
+cd grokking-dl
+cp .env.gpu .env               # NVIDIA GPU 가 있는 PC 만 (Windows: copy .env.gpu .env)
+```
+
+GPU가 없는 PC(Mac 등)는 `.env` 를 만들지 않는다. 그러면 GPU 없이 CPU로만 뜬다.
+
 ## 시작·종료
 
 ```bash
-cd ~/workspace/learn/grokking-dl
 docker compose up -d --build   # 시작 (바뀐 것이 없으면 몇 초 안에 끝남)
 docker compose down            # 종료
+```
+
+## 이어서 공부하기
+
+```bash
+git pull                                        # 시작 전: 다른 PC에서 한 것 받기
+git add -A && git commit -m "4장 실습" && git push   # 끝난 뒤: 올리기
 ```
 
 브라우저에서 **http://127.0.0.1:8890/lab** 을 연다. 토큰·비밀번호는 없다(이 PC에서만 접속 가능).

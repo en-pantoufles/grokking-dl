@@ -6,10 +6,3 @@ services:
       - "127.0.0.1:8890:8888"
     volumes:
       - .:/work
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]

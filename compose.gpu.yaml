@@ -1,0 +1,10 @@
+# NVIDIA GPU 가 있는 PC 에서만 compose.yaml 위에 겹쳐 쓴다(.env.gpu 참고).
+services:
+  jupyter:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
