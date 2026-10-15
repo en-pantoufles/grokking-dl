@@ -1,0 +1,15 @@
+# Jupyter 가 만드는 자동 저장본·휴지통
+.ipynb_checkpoints/
+.Trash-*/
+
+# 컨테이너가 이 폴더에 남기는 JupyterLab 설정·레이아웃(PC 마다 다름)
+.jupyter/
+
+# Python 캐시, 호스트에서 uv 를 직접 돌렸을 때 생기는 가상환경
+__pycache__/
+.venv/
+
+# OS·편집기가 만드는 파일
+.DS_Store
+Thumbs.db
+.vscode/

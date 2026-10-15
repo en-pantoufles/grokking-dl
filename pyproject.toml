@@ -1,0 +1,17 @@
+[project]
+name = "grokking-dl"
+version = "0.1.0"
+description = "그로킹 딥러닝 예제 실습용 JupyterLab 플레이그라운드"
+requires-python = "==3.14.*"
+dependencies = [
+    "jupyterlab",
+    "numpy",
+    # NumPy 와 같은 API 의 GPU 배열 라이브러리. [ctk] 가 CUDA 13 런타임 라이브러리를 pip 로 함께 설치한다.
+    "cupy-cuda13x[ctk]",
+]
+
+[tool.uv]
+# 설치할 패키지가 아니라 의존성 묶음으로만 쓴다.
+package = false
+# 컨테이너(Linux)에서만 설치하므로 잠금 파일도 Linux 만 푼다.
+environments = ["sys_platform == 'linux'"]

@@ -1,0 +1,4 @@
+# 이미지에는 의존성 정의만 들어간다. 노트북·데이터는 실행할 때 bind mount 로 붙는다.
+*
+!pyproject.toml
+!uv.lock
